@@ -3,6 +3,14 @@
 
 @import "heroui-native/styles";
 
-/* End-user path: heroui-native lives in the project's node_modules, one
-   level up from this src/global.css file. */
+@layer theme {
+  @variant light {
+    --accent: oklch(0.5934 0.0783 126.56);
+  }
+
+  @variant dark {
+    --accent: oklch(0.5934 0.0783 126.56);
+  }
+}
+
 @source '../node_modules/heroui-native/lib';
