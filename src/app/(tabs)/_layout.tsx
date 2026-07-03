@@ -15,6 +15,7 @@ export default function TabsLayout() {
           elevation: 10,
           shadowOpacity: 0.08,
         },
+        tabBarActiveTintColor: "#000",
       }}
     >
       <Tabs.Screen
@@ -73,6 +74,13 @@ export default function TabsLayout() {
         name="more"
         options={{
           tabBarIcon: ({ color }) => <Menu color={color as string} size={24} />,
+        }}
+      />
+
+      <Tabs.Screen
+        name="safety-guidelines"
+        options={{
+          href: null,
         }}
       />
     </Tabs>

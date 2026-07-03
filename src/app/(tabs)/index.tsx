@@ -52,10 +52,6 @@ export default function HomeTab(): JSX.Element {
               />
             </View>
           </View>
-
-          <View className="my-4">
-            <SafetyBanner onPress={() => {}} />
-          </View>
         </View>
       </SafeAreaView>
     </View>
