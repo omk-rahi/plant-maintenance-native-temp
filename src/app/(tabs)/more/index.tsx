@@ -7,7 +7,8 @@ import { ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const MORE_ROUTE_MAP: Record<string, Href> = {
-  "safety-guidelines": "/(tabs)/safety-guidelines/",
+  "safety-guidelines": "/(tabs)/more/safety-guidelines",
+  training: "/(tabs)/more/training",
 };
 
 export default function MoreTab(): JSX.Element {

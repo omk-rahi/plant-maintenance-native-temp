@@ -3,14 +3,35 @@
 
 @import "heroui-native/styles";
 
+:root,
+[data-theme="light"] {
+  --info: oklch(0.6204 0.195 253.83);
+  --info-foreground: oklch(1 0 0);
+}
+
+.dark,
+[data-theme="dark"] {
+  --info: oklch(0.6204 0.195 253.83);
+  --info-foreground: oklch(1 0 0);
+}
+
 @layer theme {
   @variant light {
     --accent: oklch(0.5934 0.0783 126.56);
+    --info: oklch(0.6204 0.195 253.83);
+    --info-foreground: oklch(1 0 0);
   }
 
   @variant dark {
     --accent: oklch(0.5934 0.0783 126.56);
+    --info: oklch(0.6204 0.195 253.83);
+    --info-foreground: oklch(1 0 0);
   }
+}
+
+@theme inline {
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
 }
 
 @source '../node_modules/heroui-native/lib';

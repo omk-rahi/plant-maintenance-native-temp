@@ -1,6 +1,6 @@
 import { Card, Typography } from "heroui-native";
 import type { MoreMenuSection as MoreMenuSectionType } from "@/features/more/constants/menu-sections";
-import { MoreMenuItem } from "@/features/more/components/more-menu-item";
+import { MenuListItem } from "@/components/menu-list-item";
 import { View } from "react-native";
 
 type MoreMenuSectionProps = {
@@ -21,7 +21,7 @@ export function MoreMenuSection({
       <Card className="px-0 py-1">
         <Card.Body className="px-0">
           {section.items.map((item, index) => (
-            <MoreMenuItem
+            <MenuListItem
               key={item.id}
               title={item.title}
               description={item.description}

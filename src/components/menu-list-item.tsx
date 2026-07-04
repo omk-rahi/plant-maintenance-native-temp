@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react-native";
 import type { LucideIcon } from "lucide-react-native";
 import { Pressable, View } from "react-native";
 
-type MoreMenuItemProps = {
+export type MenuListItemProps = {
   title: string;
   description: string;
   Icon: LucideIcon;
@@ -13,7 +13,7 @@ type MoreMenuItemProps = {
   onPress?: () => void;
 };
 
-export function MoreMenuItem({
+export function MenuListItem({
   title,
   description,
   Icon,
@@ -21,12 +21,9 @@ export function MoreMenuItem({
   bgColor,
   isLast = false,
   onPress,
-}: MoreMenuItemProps) {
+}: MenuListItemProps) {
   return (
-    <Pressable
-      onPress={onPress}
-      android_ripple={{ color: "rgba(0,0,0,0.06)" }}
-    >
+    <Pressable onPress={onPress} android_ripple={{ color: "rgba(0,0,0,0.06)" }}>
       <>
         <View className="flex-row items-center px-4 py-3">
           <View
@@ -37,14 +34,9 @@ export function MoreMenuItem({
           </View>
 
           <View className="ml-3 flex-1">
-            <Typography className="text-sm font-semibold">
-              {title}
-            </Typography>
+            <Typography className="text-sm font-semibold">{title}</Typography>
 
-            <Typography
-              className="mt-0.5 text-xs text-muted"
-              numberOfLines={1}
-            >
+            <Typography className="mt-0.5 text-xs text-muted" numberOfLines={1}>
               {description}
             </Typography>
           </View>
@@ -52,9 +44,7 @@ export function MoreMenuItem({
           <ChevronRight size={18} color="#9CA3AF" />
         </View>
 
-        {!isLast && (
-          <Separator className="opacity-30"/>
-        )}
+        {!isLast && <Separator className="opacity-30" />}
       </>
     </Pressable>
   );

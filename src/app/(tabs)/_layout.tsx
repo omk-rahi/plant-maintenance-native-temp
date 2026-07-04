@@ -40,7 +40,6 @@ export default function TabsLayout() {
 
             return (
               <Pressable
-                {...rest}
                 style={{
                   flex: 1,
                   alignItems: "center",
@@ -49,6 +48,7 @@ export default function TabsLayout() {
                 }}
               >
                 <Button
+                  {...rest}
                   style={{
                     width: 60,
                     height: 60,
@@ -73,14 +73,8 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="more"
         options={{
+          href: "/more",
           tabBarIcon: ({ color }) => <Menu color={color as string} size={24} />,
-        }}
-      />
-
-      <Tabs.Screen
-        name="safety-guidelines"
-        options={{
-          href: null,
         }}
       />
     </Tabs>

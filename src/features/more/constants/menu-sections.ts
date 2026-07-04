@@ -11,7 +11,7 @@ import {
 } from "lucide-react-native";
 import type { LucideIcon } from "lucide-react-native";
 
-export type MoreMenuItem = {
+export type MenuSectionItem = {
   id: string;
   title: string;
   description: string;
@@ -23,7 +23,7 @@ export type MoreMenuItem = {
 export type MoreMenuSection = {
   id: string;
   title: string;
-  items: MoreMenuItem[];
+  items: MenuSectionItem[];
 };
 
 export const MORE_MENU_SECTIONS: MoreMenuSection[] = [
