@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   TriangleAlert,
   ClipboardList,
+  Bug,
 } from "lucide-react-native";
 import type { LucideIcon } from "lucide-react-native";
 
@@ -76,6 +77,14 @@ export const MORE_MENU_SECTIONS: MoreMenuSection[] = [
         Icon: CircleHelp,
         color: "#2563EB",
         bgColor: "#DBEAFE",
+      },
+      {
+        id: "report-issue",
+        title: "Bug Report",
+        description: "Help us improve the app",
+        Icon: Bug,
+        color: "#F59E0B",
+        bgColor: "#FEF3C7",
       },
       {
         id: "settings",

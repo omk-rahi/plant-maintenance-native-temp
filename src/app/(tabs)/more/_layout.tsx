@@ -24,6 +24,22 @@ export default function MoreLayout(): JSX.Element {
           headerBackTitle: "More",
         }}
       />
+      <Stack.Screen
+        name="help"
+        options={{
+          headerShown: true,
+          title: "Help & Support",
+          headerBackTitle: "More",
+        }}
+      />
+      <Stack.Screen
+        name="report-issue"
+        options={{
+          headerShown: true,
+          title: "Bug Report",
+          headerBackTitle: "More",
+        }}
+      />
     </Stack>
   );
 }
